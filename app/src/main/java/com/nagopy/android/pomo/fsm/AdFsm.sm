@@ -1,0 +1,43 @@
+%package    com.nagopy.android.pomo.fsm.gen
+%import     com.nagopy.android.pomo.fsm.AdAction
+%class      AdAction
+%fsmclass   AdFsm
+
+%start      AdStateMap::UNINITIALIZED
+
+%map AdStateMap
+%%
+
+UNINITIALIZED
+{
+    init INITIALIZED { adInit(); }
+}
+
+INITIALIZED
+{
+    show RESUMED {}
+    hide nil {}
+}
+
+RESUMED
+    Entry { adResume(); }
+{
+    show nil {}
+    hide PAUSED {}
+}
+
+PAUSED
+    Entry { adPause(); }
+{
+    show RESUMED {}
+    hide nil {}
+    destroy DESTROYED {}
+}
+
+DESTROYED
+    Entry { adDestroy(); }
+{
+}
+
+%%
+

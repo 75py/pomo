@@ -1,0 +1,97 @@
+%package    com.nagopy.android.pomo.fsm.gen
+%import     com.nagopy.android.pomo.fsm.PomoAction
+%class      PomoAction
+%fsmclass   PomoFsm
+
+%start      PomoStateMap::UNINITIALIZED
+
+%map PomoStateMap
+%%
+
+UNINITIALIZED
+{
+    init IDLE { init(); }
+    appPause nil { throwIllegalStateException(); }
+}
+
+IDLE
+    Entry {
+        resetTimerCount();
+        layout_IDLE();
+        showNavigation();
+        showAds();
+    }
+{
+    start RUNNING { }
+}
+
+RUNNING
+    Entry {
+        layout_RUNNING();
+        hideNavigation();
+        startWorkTimer();
+        hideAds();
+    }
+    Exit {
+        stopTimer();
+        showNavigation();
+        showAds();
+    }
+{
+    pause PAUSED {}
+    finish FINISHED {}
+}
+
+PAUSED
+    Entry { layout_PAUSE(); }
+{
+    restart RUNNING {}
+    finish FINISHED {}
+}
+
+FINISHED
+    Entry { layout_FINISHED(); }
+{
+    shortBreak SHORT_BREAKING { }
+    longBreak LONG_BREAKING { }
+}
+
+SHORT_BREAKING
+    Entry {
+        resetTimerCount();
+        layout_SHORT_BREAKING();
+        startShortBreakTimer();
+    }
+    Exit {
+        stopTimer();
+    }
+{
+    finish IDLE { }
+}
+
+LONG_BREAKING
+    Entry {
+        resetTimerCount();
+        layout_LONG_BREAKING();
+        startLongBreakTimer();
+    }
+    Exit {
+        stopTimer();
+    }
+{
+    finish IDLE { }
+}
+
+APP_PAUSED
+{
+    appPause nil { throwIllegalStateException(); }
+    appResume IDLE {}
+}
+
+Default
+{
+    appResume nil { }
+    appPause APP_PAUSED { }
+}
+%%
+

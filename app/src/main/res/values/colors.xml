@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="work_total">#FF6347</color>
+    <color name="work_min">#FFBF47</color>
+    <color name="work_sec">#FF4788</color>
+
+    <color name="rest_total">#88FF47</color>
+    <color name="rest_min">#E3FF47</color>
+    <color name="rest_sec">#47FF63</color>
+</resources>

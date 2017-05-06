@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="def_work_minutes">25</integer>
+    <integer name="def_short_break_minutes">5</integer>
+    <integer name="def_long_break_minutes">15</integer>
+</resources>

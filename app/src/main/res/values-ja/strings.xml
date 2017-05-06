@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">POMO</string>
+    <string name="about">このアプリについて</string>
+    <string name="action_settings">設定</string>
+    <string name="finish">終了</string>
+    <string name="long_rest">長めの休憩</string>
+    <string name="msg_finished">お疲れさまでした！</string>
+    <string name="msg_long_breaking">長めの休憩中……</string>
+    <string name="msg_paused">停止中……</string>
+    <string name="msg_short_breaking">短めの休憩中……</string>
+    <string name="msg_start_working">一本集中！</string>
+    <string name="open_source_license">オープンソースライセンス</string>
+    <string name="pause">一時停止</string>
+    <string name="restart">再開</string>
+    <string name="short_rest">短めの休憩</string>
+    <string name="source_code_title">ソースコード</string>
+    <string name="start">開始</string>
+    <string name="title_long_break_minutes">長めの休憩時間（分）</string>
+    <string name="title_short_break_minutes">短めの休憩時間（分）</string>
+    <string name="title_use_vibration">終了時のバイブレーション</string>
+    <string name="title_work_minutes">作業時間（分）</string>
+    <string name="version_title">バージョン情報</string>
+</resources>

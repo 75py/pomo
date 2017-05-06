@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">POMO</string>
+
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="finish">Finish</string>
+    <string name="short_rest">Short rest</string>
+    <string name="long_rest">Long rest</string>
+    <string name="restart">Restart</string>
+
+    <string name="msg_start_working">Working…</string>
+    <string name="msg_paused">Paused…</string>
+    <string name="msg_finished">Finished. Nice work!</string>
+    <string name="msg_short_breaking">Short breaking…</string>
+    <string name="msg_long_breaking">Long breaking…</string>
+
+    <string name="title_work_minutes">Work minutes</string>
+    <string name="key_work_minutes" translatable="false">work_minutes</string>
+
+    <string name="title_short_break_minutes">Short break minutes</string>
+    <string name="key_short_break_minutes" translatable="false">short_break_minutes</string>
+
+    <string name="title_long_break_minutes">Long break minutes</string>
+    <string name="key_long_break_minutes" translatable="false">long_break_minutes</string>
+
+    <string name="title_use_vibration">Use vibration</string>
+    <string name="key_use_vibration" translatable="false">key_vibrate</string>
+
+    <string name="about">About</string>
+    <string name="version_title">Version</string>
+    <string name="source_code_title">Source code</string>
+    <string name="source_code_url" translatable="false">https://github.com/75py/pomo</string>
+    <string name="open_source_license">Open source license</string>
+    <string name="action_settings">Settings</string>
+</resources>
